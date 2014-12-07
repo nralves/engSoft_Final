@@ -1,4 +1,12 @@
 RG::Application.routes.draw do
+  resources :skills
+
+  resources :users
+
+  root 'users#profile'
+
+  match '/add_skill' => 'users#add_skill', :as => 'add_skill', :via => :post
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
