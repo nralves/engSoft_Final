@@ -38,4 +38,14 @@
   <% end %>
 <%end%>
 
+<hr>
+<h3> Questões colocadas por mim </h3>
+
+ <% (@user.questions).each do |question| %>
+    <p>
+         <%= link_to question.title, question %>
+    </p>
+<% end -%>
+
+
 <%= link_to 'Back', users_path %>
