@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  USERID = 1
+
   def add_skill
 
     user = User.find(params[:user_id])

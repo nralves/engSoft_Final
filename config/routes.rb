@@ -21,6 +21,9 @@ RG::Application.routes.draw do
 
   match '/add_skill_to_publication' => 'publications#add_skill_to_publication', :as => 'add_skill_to_publication', :via => :post
   
+  match '/add_answer_to_question' => 'questions#add_answer_to_question', :as => 'add_answer_to_question', :via => :post
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

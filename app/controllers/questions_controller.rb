@@ -1,6 +1,21 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
+    def add_answer_to_question
+      @answer = Answer.new(answer_params)
+      @question = Question.find(params[:question_id])
+
+      respond_to do |format|
+        if @answer.save
+          format.html { redirect_to @question, notice: 'Answer was successfully added.' }
+          format.json { render action: 'show', status: :created, location: @question }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @answer.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
   def add_skill_to_question
 
     question = Question.find(params[:question_id])
@@ -86,4 +101,8 @@ class QuestionsController < ApplicationController
     def question_params
       params.require(:question).permit(:title, :body, :user_id)
     end
+
+    def answer_params
+      params.require(:answer).permit(:body, :question_id, :user_id)
+   end
 end
