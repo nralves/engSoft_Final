@@ -1,6 +1,21 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
+  def add_skill_to_question
+
+    question = Question.find(params[:question_id])
+    #skill = Skill.find(params[:skill][:skill_id])
+    skill = Skill.find(params[:skill_id])
+    question.skills << skill
+
+    @question = question
+    respond_to do |format|
+      format.html { redirect_to @question, notice: 'Skill Adicionado.' }
+        format.json { head :no_content }
+    end
+
+  end
+
   # GET /questions
   # GET /questions.json
   def index

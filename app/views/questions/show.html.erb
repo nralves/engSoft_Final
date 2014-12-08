@@ -15,5 +15,24 @@
   <%= @question.user_id %>
 </p>
 
+<h3> skills </h3>
+
+ <% (@question.skills).each do |skill| %>
+    <p>
+         <%= Skill.find(skill.id).name %>
+    </p>
+<% end -%>
+
+<hr>
+<h2> Skills para adicionar </h2>
+ <% Skill.all.each do |skill| %>
+   <% if !((@question.skills).include? skill) %>
+    <%= form_for :skill, url: { action: "add_skill_to_question", :question_id=>@question.id, :skill_id => skill.id} do |f| %>
+      <%= skill.name %>
+      <%= submit_tag "Adicionar" %>
+    <% end %>
+  <% end %>
+<%end%>
+
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>
