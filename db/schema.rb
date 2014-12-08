@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208024052) do
+ActiveRecord::Schema.define(version: 20141208030756) do
 
   create_table "answers", force: true do |t|
     t.text     "body"
@@ -20,6 +20,23 @@ ActiveRecord::Schema.define(version: 20141208024052) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "jobs", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "author"
+    t.boolean  "available"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs_skills", id: false, force: true do |t|
+    t.integer "job_id"
+    t.integer "skill_id"
+  end
+
+  add_index "jobs_skills", ["job_id", "skill_id"], name: "index_jobs_skills_on_job_id_and_skill_id"
 
   create_table "questions", force: true do |t|
     t.string   "title"
