@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
       respond_to do |format|
         if @answer.save
-          format.html { redirect_to @question, notice: 'Answer was successfully added.' }
+          format.html { redirect_to questions_path, notice: 'Answer was successfully added.' }
           format.json { render action: 'show', status: :created, location: @question }
         else
           format.html { render action: 'new' }
