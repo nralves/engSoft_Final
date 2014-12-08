@@ -15,6 +15,24 @@
   <%= link_to "Download", @publication.document.url(:original, false) %>
 </p>
 
+<h3> skills associadas</h3>
+
+ <% (@publication.skills).each do |skill| %>
+    <p>
+         <%= Skill.find(skill.id).name %>
+    </p>
+<% end -%>
+
+<hr>
+<h2> Skills para adicionar </h2>
+ <% Skill.all.each do |skill| %>
+   <% if !((@publication.skills).include? skill) %>
+    <%= form_for :skill, url: { action: "add_skill_to_publication", :publication_id=>@publication.id, :skill_id => skill.id} do |f| %>
+      <%= skill.name %>
+      <%= submit_tag "Adicionar" %>
+    <% end %>
+  <% end %>
+<%end%>
 
 
 <%= link_to 'Edit', edit_publication_path(@publication) %> |

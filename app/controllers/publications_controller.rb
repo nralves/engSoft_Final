@@ -1,6 +1,21 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
 
+  def add_skill_to_publication
+
+    publication = Publication.find(params[:publication_id])
+    #skill = Skill.find(params[:skill][:skill_id])
+    skill = Skill.find(params[:skill_id])
+    publication.skills << skill
+
+    @publication = publication
+    respond_to do |format|
+      format.html { redirect_to @publication, notice: 'Skill Adicionado.' }
+        format.json { head :no_content }
+    end
+
+  end
+
   # GET /publications
   # GET /publications.json
   def index
