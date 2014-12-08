@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @publication.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @publication.user_id %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= link_to "Download", @publication.document.url(:original, false) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

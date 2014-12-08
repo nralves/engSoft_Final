@@ -1,4 +1,6 @@
 RG::Application.routes.draw do
+  resources :publications
+
   resources :jobs
 
   resources :answers

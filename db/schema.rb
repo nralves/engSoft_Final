@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208030756) do
+ActiveRecord::Schema.define(version: 20141208123934) do
 
   create_table "answers", force: true do |t|
     t.text     "body"
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20141208030756) do
   end
 
   add_index "jobs_skills", ["job_id", "skill_id"], name: "index_jobs_skills_on_job_id_and_skill_id"
+
+  create_table "publications", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+  end
 
   create_table "questions", force: true do |t|
     t.string   "title"
