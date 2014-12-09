@@ -54,6 +54,16 @@
   <% end -%>
 </div>
 
+<div class="questions">
+  <h3> As minhas publicações </h3>
+
+   <% (@user.publications).each do |publication| %>
+      <p>
+           <%= link_to publication.name, publication %>
+      </p>
+  <% end -%>
+</div>
+
 
 
 <%= link_to 'Back', users_path %>
