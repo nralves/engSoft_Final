@@ -177,3 +177,15 @@ button{
 	}
 }
 
+.questions {
+	.question {
+		border-bottom: 1px solid silver;
+		padding: 10px 0;
+		.title {
+			font-size: 14px;
+			line-height: 21px;
+			font-weight: bold;
+		}
+	}
+}
+

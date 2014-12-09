@@ -1,53 +1,17 @@
-<h1>Listing questions</h1>
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @questions.each do |question| %>
-    <tr>
-        <td><h3>Question</h3></td>
-      </tr>
-      <tr>
-        <td><%= question.title %></td>
-        <td><%= question.body %></td>
-        <td><%= question.user_id %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <tr>
-        <td><h3> skills associadas</h3></td>
-      </tr>
-      <tr>
+<div class="questions">
+  <h1>Perguntas</h1>
+  <% @questions.each do |question| %>
+    <div class="question">
+      <div class="user"><%= question.user_id %></div>
+      <div clas="title"><%= link_to question.title, question %></div>
+      <div clas="body"><%= question.body %></div>  
+      <div class="topics">
         <% (question.skills).each do |skill| %>
-          <td>
-            <%= Skill.find(skill.id).name %>
-          </td>
+          <span class="topic"><%= Skill.find(skill.id).name %></span>
         <% end -%>
-      </tr>
-      <% question.answers.each do |answer| %>
-      <tr>
-        <td><h4>Answer</h4></td>
-      </tr>
-      <tr>
-        <td><%= answer.body %></td>
-        <td><%= answer.user_id %></td>
-      </tr>
+      </div>
+    </div>
       <% end %>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Question', new_question_path %>
+  <%= link_to 'New Question', new_question_path %>
+</div>
