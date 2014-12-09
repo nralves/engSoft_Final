@@ -1,48 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="page-job">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="job-title"><%= @job.title %></div>
+  <div class="author"><%= @job.author %></div>
+  <div class="user"><%= @job.user_id %></div>
+  <div class="temas">
+    <% (@job.skills).each do |skill| %>
+        <span class="skill"><%= Skill.find(skill.id).name %></span>
+    <% end -%>
+  </div>
+  <div class="body"><%= @job.body %></div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @job.body %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @job.author %>
-</p>
-
-<p>
-  <strong>Available:</strong>
-  <%= @job.available %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @job.user_id %>
-</p>
-
-<h3> skills </h3>
-
- <% (@job.skills).each do |skill| %>
-    <p>
-         <%= Skill.find(skill.id).name %>
-    </p>
-<% end -%>
-
-<hr>
-<h2> Skills para adicionar </h2>
- <% Skill.all.each do |skill| %>
-   <% if !((@job.skills).include? skill) %>
-    <%= form_for :skill, url: { action: "add_skill_to_job", :job_id=>@job.id, :skill_id => skill.id} do |f| %>
-      <%= skill.name %>
-      <%= submit_tag "Adicionar" %>
-    <% end %>
-  <% end %>
-<%end%>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <%= link_to 'Back', jobs_path %>
+</div>

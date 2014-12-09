@@ -1,46 +1,15 @@
-<h1>Listing jobs</h1>
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Author</th>
-      <th>Available</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.title %></td>
-        <td><%= job.body %></td>
-        <td><%= job.author %></td>
-        <td><%= job.available %></td>
-        <td><%= job.user_id %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <tr>
-        <td><h3> skills associadas</h3></td>
-      </tr>
-      <tr>
-        <% (job.skills).each do |skill| %>
-          <td>
-            <%= Skill.find(skill.id).name %>
-          </td>
-        <% end -%>
-      </tr>
-
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Job', new_job_path %>
+<div class="jobs">
+  <h2>Trabalhos para si</h2>
+  <% @jobs.each do |job| %>
+    <div class="job">
+      <div class="title"><%= job.title %></div>
+      <div class="body"><%= job.body %></div>
+      <div class="author"><%= job.author %></div>
+      <%= link_to ".", job %>
+      <!--<td><%= link_to 'Show', job %></td>
+      <td><%= link_to 'Edit', edit_job_path(job) %></td>
+      <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+    </div>
+  <% end %>
+<!--<%= link_to 'New Job', new_job_path %>-->
+</div>

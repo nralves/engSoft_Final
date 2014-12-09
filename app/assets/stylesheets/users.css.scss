@@ -212,7 +212,7 @@ button{
 .skills,.skills-add,.questions,
 .question.show,
 .question.edit .topics,.question.edit .add-topics,
-.questions .topics {
+.questions .topics,.jobs,.page-job {
 	background-color: #f7f7f4;
 	margin-top: 10px;
 	padding: 20px;
@@ -289,6 +289,69 @@ button{
 			color: white;
 			padding: 10px;
 		}	
+	}
+}
+
+.jobs {
+	text-align: center;
+	position: relative;
+	.job {
+		background: white;
+		border: 1px solid silver;
+		padding: 10px;
+		display: inline-block;
+		text-align: left;
+		margin: 10px;
+		position: relative;
+		width: 45%;
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.body {
+			color: #666;
+		}
+		.author {
+			color: #999;
+		}
+		& > a {
+			position: absolute;
+			font-size: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			&:hover {
+				background: none;
+			}
+		}
+	}
+}
+
+.page-job {
+	.job-title {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 1.3;
+	}
+	.author {
+		color: #666;
+		margin-top: 10px;
+	}
+	.user {
+		color: #666;
+	}
+
+	.temas {
+		margin-bottom: 10px;
+		margin-top: 15px;
+		h3 {
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+	}
+	.body {
+		margin-top: 20px;
 	}
 }
 
