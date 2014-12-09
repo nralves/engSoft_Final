@@ -23,6 +23,7 @@ RG::Application.routes.draw do
   
   match '/add_answer_to_question' => 'questions#add_answer_to_question', :as => 'add_answer_to_question', :via => :post
 
+  match '/apply_to_job' => 'jobs#apply_to_job', :as => 'apply_to_job', :via=> :patch
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

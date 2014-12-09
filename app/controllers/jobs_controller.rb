@@ -16,6 +16,19 @@ class JobsController < ApplicationController
 
   end
 
+  def apply_to_job
+    @job = Job.find params[:job_id]
+    respond_to do |format|
+      if @job.update(job_params)
+        format.html { redirect_to @job, notice: 'A sua candidatura foi recebida.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @job.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # GET /jobs
   # GET /jobs.json
   def index
