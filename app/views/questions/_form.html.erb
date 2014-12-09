@@ -23,14 +23,6 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="field">
-        <% for skill in Skill.all %>
-            <div>
-                <%= check_box_tag "question[skill_ids][]", skill.id, @question.skills.include?(skill) %>
-                <%= skill.name %>
-            </div>
-        <% end %>
-    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
