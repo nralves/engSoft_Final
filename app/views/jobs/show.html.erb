@@ -1,59 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="page-job">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="job-title"><%= @job.title %></div>
+  <div class="author"><%= @job.author %></div>
+  <div class="temas">
+    <% (@job.skills).each do |skill| %>
+        <span class="skill"><%= Skill.find(skill.id).name %></span>
+    <% end -%>
+  </div>
+  <div class="body"><%= @job.body %></div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @job.body %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @job.author %>
-</p>
-
-<p>
-  <strong>Available:</strong>
-  <%= @job.available %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @job.user_id %>
-</p>
-
-<h3> skills </h3>
-
- <% (@job.skills).each do |skill| %>
-    <p>
-         <%= Skill.find(skill.id).name %>
-    </p>
-<% end -%>
-
-<hr>
-<h2> Skills para adicionar </h2>
- <% Skill.all.each do |skill| %>
-   <% if !((@job.skills).include? skill) %>
-    <%= form_for :skill, url: { action: "add_skill_to_job", :job_id=>@job.id, :skill_id => skill.id} do |f| %>
-      <%= skill.name %>
-      <%= submit_tag "Adicionar" %>
-    <% end %>
-  <% end %>
-<%end%>
-
-<% if !( (User.find_by_id(UsersController::USERID)).jobs.include? @job) %>
-<%= form_for @job, url: { action: "apply_to_job", :job_id => @job.id}, method: :patch do |f| %>
+  <% if !( (User.find_by_id(UsersController::USERID)).jobs.include? @job) %>
+    <%= form_for @job, url: { action: "apply_to_job", :job_id => @job.id}, method: :patch do |f| %>
       <%= f.hidden_field :title, :value=>  @job.title %>
       <%= f.hidden_field :body, :value=>  @job.body %>
       <%= f.hidden_field :author, :value=>  @job.author %>
       <%= f.hidden_field :available, :value=>  @job.available %>
       <%= f.hidden_field :user_id, :value=>  UsersController::USERID %>
       <%= f.submit :value => "Adicionar" %>
+      <% end %>
     <% end %>
-<% end %>
 
-<%= link_to 'Edit', edit_job_path(@job) %> | 
-<%= link_to 'Back', jobs_path %>
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <%= link_to 'Back', jobs_path %>
+</div>
+
+
