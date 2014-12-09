@@ -336,6 +336,7 @@ button{
 }
 
 .page-job {
+	position: relative;
 	.job-title {
 		font-weight: bold;
 		font-size: 18px;
@@ -359,6 +360,16 @@ button{
 	}
 	.body {
 		margin-top: 20px;
+	}
+	.apply-to-job {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		input {
+			background-color: #588631;
+			border: none;
+			color: white;
+		}
 	}
 }
 
