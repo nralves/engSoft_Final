@@ -1,3 +1,106 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+}
+#header,
+.content {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.content {
+	border: 1px solid silver;
+	border-top: 0;
+	padding: 10px;
+}
+
+ul{
+	padding:0px;
+	margin:0px;
+	right:0px;
+
+}
+
+.header-wrapper {
+	background-color: #4e4e4e;
+	#header{
+		height:50px;
+		width: 100%;
+		background-color: #4e4e4e;
+		padding:0px;
+		li{
+			font-size: 15px;
+			color: silver;
+			display: inline-block;
+			position: relative;
+			margin: auto;
+			height: 100%;
+			vertical-align:middle;
+			padding-right:20px;
+			a {
+				color: silver;
+				display: block;
+				height: 35px;
+				padding-top: 15px;
+				&:hover {
+					background: none;
+					border-bottom: 2px solid silver;
+				}
+			}
+			&:last-child {
+				float: right;
+				a {
+					height: 43px;
+					padding-top: 7px;
+				}
+			}
+		}
+	}
+}
+
+button{
+	background-color: #4e4e4e;
+	border:none;
+	color:silver;
+}
+
+#user{
+	//padding-left:50%;
+}
+
+#profile{
+	background-color: #F0F0F0;
+	height:120px;
+	border:1px solid #C8C8C8;
+	li {
+		width:20%;
+		height:100%;
+		font-size: 15px;
+		color: #585858;
+		border-left:1px solid #C8C8C8;
+		display: inline-block;
+		position: relative;
+		text-align:center;
+		float:left;
+		img {
+			width:20%;
+			float:left;
+			padding-top:15px;
+		}
+	}
+}
+
+.user-info {
+	background-color: #f7f7f4;
+	padding: 10px;
+	.left,.right {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.right {
+		margin-left: 10px;
+	}
+}
