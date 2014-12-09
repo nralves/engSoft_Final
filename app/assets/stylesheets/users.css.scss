@@ -105,25 +105,6 @@ button{
 	}
 }
 
-.skills,.skills-add,.questions {
-	background-color: #f7f7f4;
-	margin-top: 10px;
-	padding: 10px;
-	h3 {
-		margin-top: 0;
-	}
-	form {
-		display: inline-block;
-	}
-	span.skill, input {
-		cursor: pointer;
-		background: white;
-		font-size: 13px;
-		padding: 5px;
-		border: 1px solid black;
-	}
-}
-
 .questions {
 	a {
 		text-decoration: none;
@@ -142,11 +123,57 @@ button{
 		padding: 5px;
 		width: 300px;
 		&[type="submit"] {
+			border: none;
 			width: 100px;
 		}
 	}
 	textarea {
 		height: 100px;
+	}
+}
+
+.question.show {
+	.title {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	.body {
+		font-size: 14px;
+		line-height: 21px;
+		margin-bottom: 10px;
+	}
+	span.skill {
+		font-size: 10px;
+	}
+	.topic {
+		margin-bottom: 15px;
+		h3 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.skills,.skills-add,.questions,
+.question.show,
+.question.edit .topics,.question.edit .add-topics {
+	background-color: #f7f7f4;
+	margin-top: 10px;
+	padding: 10px;
+	h3 {
+		margin-top: 0;
+	}
+	form {
+		display: inline-block;
+	}
+	span.skill, input {
+		cursor: pointer;
+		background: white;
+		font-size: 13px;
+		padding: 5px;
+		border: 1px solid black;
+		width: auto;
 	}
 }
 

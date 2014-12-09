@@ -2,6 +2,22 @@
 	<h1>Editar questão</h1>
 
 	<%= render 'form' %>
+	<div class="topics">
+		<h3> Tópicos </h3>
+		<% (@question.skills).each do |skill| %>
+	    <span class="skill"><%= Skill.find(skill.id).name %></span>
+	  <% end -%>
+	</div>
+	<div class="add-topics">
+		<h3> Tópicos para adicionar </h3>
+	   <% Skill.all.each do |skill| %>
+	     <% if !((@question.skills).include? skill) %>
+	      <%= form_for :skill, url: { action: "add_skill_to_question", :question_id=>@question.id, :skill_id => skill.id} do |f| %>
+	        <%= submit_tag "+ " + skill.name %>
+	      <% end %>
+	    <% end %>
+	  <%end%>
+	</div>
 
 	<%= link_to 'Mostrar', @question %> |
 	<%= link_to 'Voltar', questions_path %>
