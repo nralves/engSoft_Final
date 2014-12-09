@@ -123,10 +123,11 @@ button{
 	}
 }
 
-.question.edit {
+.question.edit,
+.question.add {
 	input,textarea {
 		outline: none !important;
-		border: 1px solid #8fd821;
+		border: 1px solid silver;
 		padding: 5px;
 		width: 300px;
 		&[type="submit"] {
@@ -187,6 +188,55 @@ button{
 			margin-bottom: 10px;
 		}
 	}
+	.answers {
+		margin-top: 15px;
+		.label {
+			line-height: 12px;
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: bold;
+			border-bottom: 1px solid silver;
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
+		.answer {
+			position: relative;
+			padding: 20px 0;
+			padding-left: 40px;
+			border-bottom: 1px solid silver;
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			.user {
+				.image {
+					position: absolute;
+					top: 20px;
+					left: 0;
+					img {
+						width: 30px;
+						height: 30px;
+					}
+				}
+				.name {
+					color: #588631 !important;
+					font-size: 15px !important;
+				}
+				.institute {
+					font-size: 15px !important;
+				}
+				.info {
+					padding-top: 5px;
+					margin-left: 0;
+				}
+			}
+			.body {
+				font-size: 14px;
+				line-height: 21px;
+				padding-top: 10px;
+			}
+		}
+	}
 	.post-answer {
 		border-top: 1px solid silver;
 		margin-top: 15px;
@@ -199,8 +249,8 @@ button{
 			font-size: 15px !important;
 		}
 		img {
-			height: 30px;
-			width: 30px;
+			height: 30px !important;
+			width: 30px !important;
 		}
 		textarea {
 			margin-top: 10px;
@@ -219,6 +269,7 @@ button{
 .skills,.skills-add,.questions,
 .question.show,
 .question.edit .topics,.question.edit .add-topics,
+.question.add .topics,.question.add .add-topics,
 .questions .topics,.jobs,.page-job {
 	background-color: #f7f7f4;
 	margin-top: 10px;
@@ -236,6 +287,7 @@ button{
 		padding: 5px;
 		border: 1px solid black;
 		width: auto;
+		margin-bottom: 5px;
 	}
 }
 
@@ -285,6 +337,7 @@ button{
 				margin-top: 5px;
 			}
 		}
+
 	}
 	.new-question {
 		position: absolute;

@@ -1,5 +1,14 @@
-<h1>New question</h1>
+<div class="question add">
+	<h1>Adicionar questão</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
+	<div class="topics">
+		<h3> Tópicos </h3>
+		<% (@question.skills).each do |skill| %>
+	    <span class="skill"><%= Skill.find(skill.id).name %></span>
+	  <% end -%>
+	</div>
 
-<%= link_to 'Back', questions_path %>
+	<%= link_to 'Mostrar', @question %> |
+	<%= link_to 'Voltar', questions_path %>
+</div>

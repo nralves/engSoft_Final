@@ -27,10 +27,23 @@
     </div>
   </div>
   <div class="answers">
-  <% (@question.answers).each do |answer| %>
-          <span class="Answer"><%= answer.body %></span>
-          <span class="Answer"><%= User.find_by_id(answer.user_id).name %></span>
-      <% end -%>
+    <div class="label">Respostas</div>
+    <% (@question.answers).each do |answer| %>
+        <div class="answer">
+          <div class="user">
+            <div class="image">
+              <img src="/assets/default.jpg" />
+            </div>
+            <div class="info">
+              <span class="name"><%= (User.find_by_id(answer.user_id)).name %></span>
+              <span class="institute"><%= (User.find_by_id(answer.user_id)).institute %></span>
+            </div>
+          </div>
+        <div class="body">
+          <%= answer.body %>
+        </div>
+      </div>
+    <% end -%>
   </div>
   <div class="post-answer">
     <div class="user">
