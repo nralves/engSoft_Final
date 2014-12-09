@@ -2,7 +2,7 @@
   <h1>Perguntas</h1>
   <% @questions.each do |question| %>
     <div class="question">
-      <div class="user"><%= question.user_id %></div>
+      <div class="user"><%= (User.find_by_id(question.user_id)).name %></div>
       <div clas="title"><%= link_to question.title, question %></div>
       <div clas="body"><%= question.body %></div>  
       <div class="topics">
