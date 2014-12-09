@@ -13,24 +13,14 @@
       <%= @question.body %>
     </div>
 
-    <h3> skills </h3>
+    <div class="topic">
+    <h3> Topicos </h3>
 
-     <% (@question.skills).each do |skill| %>
-        <p>
-             <%= Skill.find(skill.id).name %>
-        </p>
-    <% end -%>
+       <% (@question.skills).each do |skill| %>
+          <span class="skill"><%= Skill.find(skill.id).name %></span>
+      <% end -%>
+    </div>
   </div>
-  <h2> Skills para adicionar </h2>
-   <% Skill.all.each do |skill| %>
-     <% if !((@question.skills).include? skill) %>
-      <%= form_for :skill, url: { action: "add_skill_to_question", :question_id=>@question.id, :skill_id => skill.id} do |f| %>
-        <%= skill.name %>
-        <%= submit_tag "Adicionar" %>
-      <% end %>
-    <% end %>
-  <%end%>
-
   <hr>
   <h2> Responder </h2>
       <%= form_for :answer, url: { action: "add_answer_to_question", :question_id=>@question.id} do |f| %>
