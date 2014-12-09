@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Body</th>
       <th>User</th>
       <th></th>
       <th></th>
@@ -15,6 +16,7 @@
     <% @publications.each do |publication| %>
       <tr>
         <td><%= publication.name %></td>
+        <td><%= publication.body %></td>
         <td><%= publication.user_id %></td>
         <td><%= link_to 'Show', publication %></td>
         <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
