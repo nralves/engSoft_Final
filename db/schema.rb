@@ -21,13 +21,6 @@ ActiveRecord::Schema.define(version: 20141209201236) do
     t.datetime "updated_at"
   end
 
-  create_table "descriptions", force: true do |t|
-    t.text     "body"
-    t.integer  "publication_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "jobs", force: true do |t|
     t.string   "title"
     t.text     "body"
