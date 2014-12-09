@@ -104,3 +104,34 @@ button{
 		margin-left: 10px;
 	}
 }
+
+.skills,.skills-add,.questions {
+	background-color: #f7f7f4;
+	margin-top: 10px;
+	padding: 10px;
+	h3 {
+		margin-top: 0;
+	}
+	form {
+		display: inline-block;
+	}
+	span.skill, input {
+		cursor: pointer;
+		background: white;
+		font-size: 13px;
+		padding: 5px;
+		border: 1px solid black;
+	}
+}
+
+.questions {
+	a {
+		text-decoration: none;
+		&:hover {
+			background: none;
+			color: black;
+			text-decoration: underline;
+		}
+	}
+}
+

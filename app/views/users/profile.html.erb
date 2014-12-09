@@ -24,35 +24,35 @@
       <strong>Intituicao:</strong>
       <%= @user.institute %>
     </p>
+    <%= link_to 'Editar', edit_user_path(@user) %>
   </div>
-<%= link_to 'Edit', edit_user_path(@user) %>
 </div>
-<h3> skills </h3>
+<div class="skills">
+  <h3> As minhas Skills </h3>
 
- <% (@user.skills).each do |skill| %>
-    <p>
-         <%= Skill.find(skill.id).name %>
-    </p>
-<% end -%>
-<hr>
-<h2> Skills para adicionar </h2>
- <% Skill.all.each do |skill| %>
-   <% if !((@user.skills).include? skill) %>
-    <%= form_for :skill, url: { action: "add_skill", :user_id=>@user.id, :skill_id => skill.id} do |f| %>
-      <%= skill.name %>
-      <%= submit_tag "Adicionar" %>
+   <% (@user.skills).each do |skill| %>
+      <span class="skill"><%= Skill.find(skill.id).name %></span>
+  <% end -%>
+</div>
+<div class="skills-add">
+  <h3> Skills para adicionar </h3>
+   <% Skill.all.each do |skill| %>
+     <% if !((@user.skills).include? skill) %>
+      <%= form_for :skill, url: { action: "add_skill", :user_id=>@user.id, :skill_id => skill.id} do |f| %>
+        <%= submit_tag "+ " + skill.name %>
+      <% end %>
     <% end %>
-  <% end %>
-<%end%>
+  <%end%>
+</div>
+<div class="questions">
+  <h3> Questões colocadas por mim </h3>
 
-<hr>
-<h3> Questões colocadas por mim </h3>
-
- <% (@user.questions).each do |question| %>
-    <p>
-         <%= link_to question.title, question %>
-    </p>
-<% end -%>
+   <% (@user.questions).each do |question| %>
+      <p>
+           <%= link_to question.title, question %>
+      </p>
+  <% end -%>
+</div>
 
 
 
