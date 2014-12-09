@@ -2,16 +2,19 @@
   <h1>Perguntas</h1>
   <% @questions.each do |question| %>
     <div class="question">
-      <div class="user"><%= (User.find_by_id(question.user_id)).name %></div>
-      <div clas="title"><%= link_to question.title, question %></div>
-      <div clas="body"><%= question.body %></div>  
+      <span class="image"><img src="/assets/default.jpg" /></span>
+      <div class="user">
+        <%= (User.find_by_id(question.user_id)).name %> fez uma pergunta
+      </div>
+      <div class="title"><%= link_to question.title, question %></div>
+      <div class="body"><%= question.body %></div>  
       <div class="topics">
         <% (question.skills).each do |skill| %>
-          <span class="topic"><%= Skill.find(skill.id).name %></span>
+          <span class="skill"><%= Skill.find(skill.id).name %></span>
         <% end -%>
       </div>
     </div>
       <% end %>
 
-  <%= link_to 'New Question', new_question_path %>
+  <span class="new-question"><%= link_to 'Colocar questão', new_question_path %></div>
 </div>

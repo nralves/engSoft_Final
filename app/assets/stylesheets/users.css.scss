@@ -133,6 +133,33 @@ button{
 }
 
 .question.show {
+	.user {
+		& > div {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.image {
+			img {
+				height: 50px;
+				width: 50px;
+			}
+		}
+		.info {
+			margin-left: 5px;
+			.name {
+				font-size: 14px;
+				color: black;
+				a {
+
+				}
+			}
+			.institute {
+				color: #999;
+				font-size: 12px;
+				margin-top: 5px;
+			}
+		}
+	}
 	.title {
 		font-size: 18px;
 		line-height: 24px;
@@ -153,14 +180,42 @@ button{
 			margin-bottom: 10px;
 		}
 	}
+	.post-answer {
+		border-top: 1px solid silver;
+		margin-top: 15px;
+		padding-top: 25px;
+		.name {
+			color: #588631 !important;
+			font-size: 15px !important;
+		}
+		.institute {
+			font-size: 15px !important;
+		}
+		img {
+			height: 30px;
+			width: 30px;
+		}
+		textarea {
+			margin-top: 10px;
+			outline: none;
+			font-size: 14px;
+			height: 80px;
+			padding: 10px;
+			width: 470px;
+			&:focus {
+				border-color: #588631;
+			}
+		}
+	}
 }
 
 .skills,.skills-add,.questions,
 .question.show,
-.question.edit .topics,.question.edit .add-topics {
+.question.edit .topics,.question.edit .add-topics,
+.questions .topics {
 	background-color: #f7f7f4;
 	margin-top: 10px;
-	padding: 10px;
+	padding: 20px;
 	h3 {
 		margin-top: 0;
 	}
@@ -178,14 +233,62 @@ button{
 }
 
 .questions {
+	position: relative;
+	& > h1 {
+		margin-top: 0;
+	}
 	.question {
 		border-bottom: 1px solid silver;
 		padding: 10px 0;
+		position: relative;
+		padding-left: 65px;
+		.image {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			top: 10px;
+			img {
+				height: 50px;
+				width: 50px;
+			}
+		}
+		.user {
+			margin-bottom: 0px;
+			line-height: 21px;
+			color: #999;
+			font-size: 14px;
+		}
 		.title {
 			font-size: 14px;
 			line-height: 21px;
 			font-weight: bold;
+			a {
+				color: #588631;
+			}
 		}
+		.body {
+			font-size: 14px;
+			line-height: 21px;
+			margin-bottom: 5px;
+		}
+		.topics {
+			padding: 0;
+			.skill {
+				display: inline-block;
+				margin-top: 5px;
+			}
+		}
+	}
+	.new-question {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		a {
+			display: block;
+			background: #588631;
+			color: white;
+			padding: 10px;
+		}	
 	}
 }
 
