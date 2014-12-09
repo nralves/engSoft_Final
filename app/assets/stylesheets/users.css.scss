@@ -45,9 +45,16 @@ ul{
 				display: block;
 				height: 35px;
 				padding-top: 15px;
+				text-decoration: none;
 				&:hover {
 					background: none;
 					border-bottom: 2px solid silver;
+				}
+			}
+			&.logo {
+				a {
+					padding-top: 0;
+					height: 50px;
 				}
 			}
 			&:last-child {
