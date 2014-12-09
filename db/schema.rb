@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208130212) do
+ActiveRecord::Schema.define(version: 20141209201236) do
 
   create_table "answers", force: true do |t|
     t.text     "body"
     t.integer  "question_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "descriptions", force: true do |t|
+    t.text     "body"
+    t.integer  "publication_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,6 +54,7 @@ ActiveRecord::Schema.define(version: 20141208130212) do
     t.string   "document_content_type"
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
+    t.text     "body"
   end
 
   create_table "publications_skills", id: false, force: true do |t|
