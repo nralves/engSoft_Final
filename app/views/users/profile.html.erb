@@ -59,7 +59,7 @@
 
    <% (@user.publications).each do |publication| %>
       <p>
-           <%= link_to publication.name, publication %>
+           <%= link_to publication.name, edit_publication_path(publication) %>
       </p>
   <% end -%>
 </div>
