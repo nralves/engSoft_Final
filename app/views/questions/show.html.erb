@@ -26,6 +26,12 @@
       <% end -%>
     </div>
   </div>
+  <div class="answers">
+  <% (@question.answers).each do |answer| %>
+          <span class="Answer"><%= answer.body %></span>
+          <span class="Answer"><%= User.find_by_id(answer.user_id).name %></span>
+      <% end -%>
+  </div>
   <div class="post-answer">
     <div class="user">
       <div class="image">
