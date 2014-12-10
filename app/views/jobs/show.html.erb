@@ -10,7 +10,9 @@
   </div>
   <div class="body"><%= @job.body %></div>
   <div class="apply-to-job">
-    <% if !( (User.find_by_id(UsersController::USERID)).jobs.include? @job) %>
+    <% if !@job.available %>
+        <p class="warning">This job is not available at the moment.</p>
+    <% elsif !( (User.find_by_id(UsersController::USERID)).jobs.include? @job) %>
       <%= form_for @job, url: { action: "apply_to_job", :job_id => @job.id}, method: :patch do |f| %>
         <%= f.hidden_field :title, :value=>  @job.title %>
         <%= f.hidden_field :body, :value=>  @job.body %>
@@ -18,11 +20,13 @@
         <%= f.hidden_field :available, :value=>  @job.available %>
         <%= f.hidden_field :user_id, :value=>  UsersController::USERID %>
         <%= f.submit :value => "Concorrer ao trabalho" %>
-        <% end %>
       <% end %>
+    <% else %>
+        <p class="notice">Já concorreu a este trabalho.</p>
+    <% end %>
   </div>
 
-  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <!--<%= link_to 'Edit', edit_job_path(@job) %> |-->
   <%= link_to 'Back', jobs_path %>
 </div>
 

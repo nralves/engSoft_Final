@@ -20,9 +20,13 @@
                 <span class="skill"><%= Skill.find(skill.id).name %></span>
               <% end -%>
             </div>
-            <div class="download">
-              <%= link_to "Download", publication.document.url(:original, false) %>
-            </div>
+            <% if publication.document.exists? %>
+              <div class="download">
+                <%= link_to "Download", publication.document.url(:original, false) %>
+              </div>
+            <% else %>
+                <p class="warning">Download not available.</p>
+            <% end %>
             <% if (publication.user_id == UsersController::USERID) %>
               <%= link_to 'Show', publication %> | 
               <%= link_to 'Edit', edit_publication_path(publication) %> |

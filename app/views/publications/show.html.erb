@@ -12,7 +12,13 @@
 
 <p>
   <strong>File:</strong>
-  <%= link_to "Download", @publication.document.url(:original, false) %>
+  		<% if @publication.document.exists? %>
+            <div class="download">
+            	<%= link_to "Download", @publication.document.url(:original, false) %>
+            </div>
+        <% else %>
+            <p class="warning">Download not available.</p>
+        <% end %>
 </p>
 
 <h3> skills associadas</h3>
