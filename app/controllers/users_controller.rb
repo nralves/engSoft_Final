@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   # GET /user
   def profile
     @users = User.all
-    @user = @users.first
+    @user = @users.find_by_id(USERID)
   end
 
   # GET /users/1

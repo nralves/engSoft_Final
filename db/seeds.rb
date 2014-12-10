@@ -28,10 +28,14 @@ Question.create(title: "Para que serve o padding utilizado nas cifras?", body: "
 
 Answer.create(body: "Fazer download do Rails e utilizar o comando na linha de comandos: rails new <App Name>",question_id: 1, user_id:2)
 
-Job.create(title: "Software Engineering Junior", body:"Requere-se um recem licenciado para trabalhar como Software Engineer Junior na nosa empresa a full-time.", author:"OpenSoft", available: true)
-Job.create(title: "RoR Develpment", body:"Requere-se um recem licenciado para trabalhar como Ruby on Rails Developer na nosa empresa a full-time.", author:"OpenWeb", available: false, user_id: 1)
+Job.create(title: "Software Engineering Junior", body:"Requere-se um recem licenciado para trabalhar como Software Engineer Junior na nosa empresa a full-time.", author:"OpenSoft", available: true, user_id: 1)
+Job.create(title: "RoR Develpment", body:"Requere-se um recem licenciado para trabalhar como Ruby on Rails Developer na nosa empresa a full-time.", author:"OpenWeb", available: true)
+Job.create(title: "Computer Networks Manager", body:"Requere-se um recem licenciado para trabalhar como Computer Network Manager Junior na nosa empresa a full-time.", author:"OpenNetwork", available: false)
 
-Publication.create(name: "Enunciado de CI", user_id: 1, :document => File.open(File.join(Rails.root, '/public/system/publications/pdf/tea.pdf')) )
+Publication.create(name: "Enunciado de CI", body: "Este é o enunciado de Codificação de Informação",user_id: 1, :document => File.open(File.join(Rails.root, '/public/system/publications/pdf/tea.pdf')) )
+Publication.create(name: "Static Typing for Ruby on Rails", body: "Ruby on Rails (or just “Rails”) is a popular web application framework built on top of Ruby, an object-oriented scripting language. While Ruby’s powerful features help make Rails development extremely lightweight, this comes at a cost: Ruby is dynamically typed, and so type errors in a Rails application can remain latent until run time, making debugging and maintenance harder. In this paper, we describe DRails, a novel tool that brings static typing to Rails applications to detect a range of run time errors. DRails works by translating Rails programs into pure Ruby code in which Rails’s numerous implicit conventions are made explicit. We then discover type errors by applying DRuby, a previously developed static type inference system, to the translated program. We ran DRails on a suite of applications and found that it was able to detect several previously unknown errors.",user_id: 1, :document => File.open(File.join(Rails.root, '/public/system/publications/pdf/stror.pdf')) )
+
+
 
 user = User.find_by_id(1)
 user.skills << Skill.find_by_id(1)

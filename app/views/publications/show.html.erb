@@ -1,17 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Titulo:</strong>
   <%= @publication.name %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Autor:</strong>
   <%= (User.find_by_id(@publication.user_id)).name %>
 </p>
 
 <p>
-  <strong>File:</strong>
+  <strong>Assunto:</strong>
+  <%= @publication.body %>
+</p>
+
+<p>
+  <strong>Ficheiro:</strong>
   		<% if @publication.document.exists? %>
             <div class="download">
             	<%= link_to "Download", @publication.document.url(:original, false) %>
@@ -21,7 +26,7 @@
         <% end %>
 </p>
 
-<h3> skills associadas</h3>
+<h3> Tópicos Associados</h3>
 
  <% (@publication.skills).each do |skill| %>
     <p>
