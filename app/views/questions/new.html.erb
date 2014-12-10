@@ -2,14 +2,6 @@
 	<h1>Adicionar questão</h1>
 
 	<%= render 'form' %>
-	<div class="field">
-        <% for skill in Skill.all %>
-            <div>
-                <%= check_box_tag "question[skill_ids][]", skill.id, @question.skills.include?(skill) %>
-                <%= skill.name %>
-            </div>
-        <% end %>
-    </div>
 	<div class="topics">
 		<h3> Tópicos </h3>
 		<% (@question.skills).each do |skill| %>
