@@ -1,31 +1,37 @@
 <div class="publicacoes">
 <h2>Lista de publicações</h2>
-
+  
+  <%  user = (User.find_by_id(UsersController::USERID)) %>
+  
   <% @publications.each do |publication| %>
-    <div class="publicacao">
-      <span class="image"><img src="/assets/default.jpg" /></span>
-      <div class="user">
-        <%= (User.find_by_id(publication.user_id)).name %> publicou um conference papper
-      </div>
-      <div class="title">
-        Conferance papper: <%= publication.name %>
-      </div>
-      <div class="body"><%= publication.body %></div>  
-      <div class="topics">
-        <% (publication.skills).each do |skill| %>
-          <span class="skill"><%= Skill.find(skill.id).name %></span>
-        <% end -%>
-      </div>
-      <div class="download">
-        <%= link_to "Download", publication.document.url(:original, false) %>
-      </div>
-      <% if (publication.user_id == UsersController::USERID) %>
-        <%= link_to 'Show', publication %> | 
-        <%= link_to 'Edit', edit_publication_path(publication) %> |
-        <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%  publication.skills.each do |s| %>
+      <% if ((user.skills).include? s) %>
+          <div class="publicacao">
+            <span class="image"><img src="/assets/default.jpg" /></span>
+            <div class="user">
+              <%= (User.find_by_id(publication.user_id)).name %> publicou um conference papper
+            </div>
+            <div class="title">
+              Conferance papper: <%= publication.name %>
+            </div>
+            <div class="body"><%= publication.body %></div>  
+            <div class="topics">
+              <% (publication.skills).each do |skill| %>
+                <span class="skill"><%= Skill.find(skill.id).name %></span>
+              <% end -%>
+            </div>
+            <div class="download">
+              <%= link_to "Download", publication.document.url(:original, false) %>
+            </div>
+            <% if (publication.user_id == UsersController::USERID) %>
+              <%= link_to 'Show', publication %> | 
+              <%= link_to 'Edit', edit_publication_path(publication) %> |
+              <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+          <% break %>
       <% end %>
-      
-    </div>
+    <% end %>
   <% end %>
 
   <span class="new-publication"><%= link_to 'Nova publicação', new_publication_path %></span>
