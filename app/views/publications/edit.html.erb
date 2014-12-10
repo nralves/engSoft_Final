@@ -8,16 +8,6 @@
 	    <span class="skill"><%= Skill.find(skill.id).name %></span>
 	  <% end -%>
 	</div>
-	<div class="add-topics">
-		<h3> Tópicos para adicionar </h3>
-	   <% Skill.all.each do |skill| %>
-	     <% if !((@publication.skills).include? skill) %>
-	      <%= form_for :skill, url: { action: "add_skill_to_publication", :question_id=>@publication.id, :skill_id => skill.id} do |f| %>
-	        <%= submit_tag "+ " + skill.name %>
-	      <% end %>
-	    <% end %>
-	  <%end%>
-	</div>
 
 	<%= link_to 'Show', @publication %> |
 	<%= link_to 'Back', publications_path %>

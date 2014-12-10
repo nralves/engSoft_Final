@@ -3,15 +3,6 @@
 
 	<%= render 'form' %>
 
-	<div class="skills">
-		 <h3>Adicionar Skills</h3>
-     <% for skill in Skill.all %>
-       	<span>
-          <%= check_box_tag "question[skill_ids][]", skill.id, @question.skills.include?(skill) %>
-          <%= skill.name %>
-        </span>
-     	<% end %>
-    </div>
 
 	<%= link_to 'Mostrar', @question %> |
 	<%= link_to 'Voltar', questions_path %>
