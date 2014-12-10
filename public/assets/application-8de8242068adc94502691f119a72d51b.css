@@ -1,0 +1,768 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+/* line 1, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 4, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+}
+
+/* line 9, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+#header,
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* line 14, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.content {
+  border: 1px solid silver;
+  border-top: 0;
+  padding: 10px;
+}
+
+/* line 20, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+ul {
+  padding: 0px;
+  margin: 0px;
+  right: 0px;
+}
+
+/* line 27, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.warning {
+  font-weight: bold;
+  color: #a00000;
+}
+
+/* line 32, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.notice {
+  font-weight: bold;
+  color: #339900;
+}
+
+/* line 37, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+p.title {
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/* line 44, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper {
+  background-color: #4e4e4e;
+}
+/* line 46, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header {
+  height: 50px;
+  width: 100%;
+  background-color: #4e4e4e;
+  padding: 0px;
+}
+/* line 51, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li {
+  font-size: 15px;
+  color: silver;
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  height: 100%;
+  vertical-align: middle;
+  padding-right: 20px;
+}
+/* line 60, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li a {
+  color: silver;
+  display: block;
+  height: 35px;
+  padding-top: 15px;
+  text-decoration: none;
+}
+/* line 66, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li a:hover {
+  background: none;
+  border-bottom: 2px solid silver;
+}
+/* line 72, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li.logo a {
+  padding-top: 0;
+  height: 50px;
+}
+/* line 77, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li:last-child {
+  float: right;
+}
+/* line 79, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.header-wrapper #header li:last-child a {
+  height: 43px;
+  padding-top: 7px;
+}
+
+/* line 88, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+button {
+  background-color: #4e4e4e;
+  border: none;
+  color: silver;
+}
+
+/* line 98, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+#profile {
+  background-color: #F0F0F0;
+  height: 120px;
+  border: 1px solid #C8C8C8;
+}
+/* line 102, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+#profile li {
+  width: 20%;
+  height: 100%;
+  font-size: 15px;
+  color: #585858;
+  border-left: 1px solid #C8C8C8;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  float: left;
+}
+/* line 112, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+#profile li img {
+  width: 20%;
+  float: left;
+  padding-top: 15px;
+}
+
+/* line 120, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.user-info {
+  background-color: #f7f7f4;
+  padding: 10px;
+}
+/* line 123, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.user-info .left, .user-info .right {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 127, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.user-info .right {
+  margin-left: 10px;
+}
+
+/* line 133, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions a {
+  text-decoration: none;
+}
+/* line 135, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions a:hover {
+  background: none;
+  color: black;
+  text-decoration: underline;
+}
+
+/* line 147, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.edit input, .question.edit textarea,
+.question.add input,
+.question.add textarea,
+.publication-edit input,
+.publication-edit textarea,
+.publication-add input,
+.publication-add textarea {
+  outline: none !important;
+  border: 1px solid silver;
+  padding: 5px;
+  width: 300px;
+}
+/* line 152, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.edit input[type="submit"], .question.edit textarea[type="submit"],
+.question.add input[type="submit"],
+.question.add textarea[type="submit"],
+.publication-edit input[type="submit"],
+.publication-edit textarea[type="submit"],
+.publication-add input[type="submit"],
+.publication-add textarea[type="submit"] {
+  border: none;
+  width: 100px;
+}
+/* line 157, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.edit textarea,
+.question.add textarea,
+.publication-edit textarea,
+.publication-add textarea {
+  height: 100px;
+}
+
+/* line 164, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publication-edit input[type="submit"],
+.publication-add input[type="submit"] {
+  width: auto;
+}
+
+/* line 172, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .user > div,
+.publicacoes .user > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 177, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .user .image img,
+.publicacoes .user .image img {
+  height: 50px;
+  width: 50px;
+}
+/* line 182, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .user .info,
+.publicacoes .user .info {
+  margin-left: 5px;
+}
+/* line 184, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .user .info .name,
+.publicacoes .user .info .name {
+  font-size: 14px;
+  color: black;
+}
+/* line 191, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .user .info .institute,
+.publicacoes .user .info .institute {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* line 198, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .title,
+.publicacoes .title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 204, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .body,
+.publicacoes .body {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+/* line 209, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show span.skill,
+.publicacoes span.skill {
+  font-size: 10px;
+}
+/* line 212, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .topic,
+.publicacoes .topic {
+  margin-bottom: 15px;
+}
+/* line 214, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .topic h3,
+.publicacoes .topic h3 {
+  margin-bottom: 10px;
+}
+/* line 218, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers,
+.publicacoes .answers {
+  margin-top: 15px;
+}
+/* line 220, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .label,
+.publicacoes .answers .label {
+  line-height: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid silver;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* line 229, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer,
+.publicacoes .answers .answer {
+  position: relative;
+  padding: 20px 0;
+  padding-left: 40px;
+  border-bottom: 1px solid silver;
+}
+/* line 234, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer:last-child,
+.publicacoes .answers .answer:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* line 239, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .user .image,
+.publicacoes .answers .answer .user .image {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+/* line 243, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .user .image img,
+.publicacoes .answers .answer .user .image img {
+  width: 30px;
+  height: 30px;
+}
+/* line 248, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .user .name,
+.publicacoes .answers .answer .user .name {
+  color: #588631 !important;
+  font-size: 15px !important;
+}
+/* line 252, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .user .institute,
+.publicacoes .answers .answer .user .institute {
+  font-size: 15px !important;
+}
+/* line 255, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .user .info,
+.publicacoes .answers .answer .user .info {
+  padding-top: 5px;
+  margin-left: 0;
+}
+/* line 260, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .answers .answer .body,
+.publicacoes .answers .answer .body {
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 10px;
+}
+/* line 267, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer,
+.publicacoes .post-answer {
+  border-top: 1px solid silver;
+  margin-top: 15px;
+  padding-top: 25px;
+}
+/* line 271, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer .name,
+.publicacoes .post-answer .name {
+  color: #588631 !important;
+  font-size: 15px !important;
+}
+/* line 275, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer .institute,
+.publicacoes .post-answer .institute {
+  font-size: 15px !important;
+}
+/* line 278, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer img,
+.publicacoes .post-answer img {
+  height: 30px !important;
+  width: 30px !important;
+}
+/* line 282, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer textarea,
+.publicacoes .post-answer textarea {
+  margin-top: 10px;
+  outline: none;
+  font-size: 14px;
+  height: 80px;
+  padding: 10px;
+  width: 470px;
+}
+/* line 289, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.question.show .post-answer textarea:focus,
+.publicacoes .post-answer textarea:focus {
+  border-color: #588631;
+}
+
+/* line 303, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.skills, .skills-add, .questions,
+.question.show,
+.question.edit .topics, .question.edit .add-topics,
+.question.add .topics, .question.add .add-topics,
+.questions .topics, .jobs, .page-job,
+.publicacoes,
+.publication-edit,
+.publication-add {
+  background-color: #f7f7f4;
+  margin-top: 10px;
+  padding: 20px;
+}
+/* line 307, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.skills h3, .skills-add h3, .questions h3,
+.question.show h3,
+.question.edit .topics h3, .question.edit .add-topics h3,
+.question.add .topics h3, .question.add .add-topics h3,
+.questions .topics h3, .jobs h3, .page-job h3,
+.publicacoes h3,
+.publication-edit h3,
+.publication-add h3 {
+  margin-top: 0;
+}
+/* line 310, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.skills form, .skills-add form, .questions form,
+.question.show form,
+.question.edit .topics form, .question.edit .add-topics form,
+.question.add .topics form, .question.add .add-topics form,
+.questions .topics form, .jobs form, .page-job form,
+.publicacoes form,
+.publication-edit form,
+.publication-add form {
+  display: inline-block;
+}
+/* line 313, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.skills span.skill, .skills input, .skills-add span.skill, .skills-add input, .questions span.skill, .questions input,
+.question.show span.skill,
+.question.show input,
+.question.edit .topics span.skill,
+.question.edit .topics input, .question.edit .add-topics span.skill, .question.edit .add-topics input,
+.question.add .topics span.skill,
+.question.add .topics input, .question.add .add-topics span.skill, .question.add .add-topics input,
+.questions .topics span.skill,
+.questions .topics input, .jobs span.skill, .jobs input, .page-job span.skill, .page-job input,
+.publicacoes span.skill,
+.publicacoes input,
+.publication-edit span.skill,
+.publication-edit input,
+.publication-add span.skill,
+.publication-add input {
+  cursor: pointer;
+  background: white;
+  font-size: 13px;
+  padding: 5px;
+  border: 1px solid black;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+/* line 324, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions {
+  position: relative;
+}
+/* line 326, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions > h1 {
+  margin-top: 0;
+}
+/* line 329, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question {
+  border-bottom: 1px solid silver;
+  padding: 10px 0;
+  position: relative;
+  padding-left: 65px;
+}
+/* line 334, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 10px;
+}
+/* line 339, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .image img {
+  height: 50px;
+  width: 50px;
+}
+/* line 344, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .user {
+  margin-bottom: 0px;
+  line-height: 21px;
+  color: #999;
+  font-size: 14px;
+}
+/* line 350, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .title {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+}
+/* line 354, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .title a {
+  color: #588631;
+}
+/* line 358, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .body {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+/* line 363, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .topics {
+  padding: 0;
+}
+/* line 365, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .question .topics .skill {
+  display: inline-block;
+  margin-top: 5px;
+}
+/* line 372, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .new-question {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/* line 376, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.questions .new-question a {
+  display: block;
+  background: #588631;
+  color: white;
+  padding: 10px;
+}
+
+/* line 385, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs {
+  text-align: center;
+  position: relative;
+}
+/* line 388, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job {
+  background: white;
+  border: 1px solid silver;
+  padding: 10px;
+  display: inline-block;
+  text-align: left;
+  margin: 10px;
+  position: relative;
+  width: 45%;
+}
+/* line 397, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 401, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job .body {
+  color: #666;
+}
+/* line 404, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job .author {
+  color: #999;
+}
+/* line 407, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job > a {
+  position: absolute;
+  font-size: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* line 414, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.jobs .job > a:hover {
+  background: none;
+}
+
+/* line 421, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job {
+  position: relative;
+}
+/* line 423, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .job-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+}
+/* line 428, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .author {
+  color: #666;
+  margin-top: 10px;
+}
+/* line 432, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .user {
+  color: #666;
+}
+/* line 436, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .temas {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+/* line 439, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .temas h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/* line 444, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .body {
+  margin-top: 20px;
+}
+/* line 447, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .apply-to-job {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/* line 451, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.page-job .apply-to-job input {
+  background-color: #588631;
+  border: none;
+  color: white;
+}
+
+/* line 459, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes {
+  position: relative;
+}
+/* line 461, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao {
+  position: relative;
+  padding: 10px 0;
+  padding-left: 60px;
+  border-bottom: 1px solid silver;
+}
+/* line 466, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .image {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+/* line 470, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .image img {
+  height: 50px;
+  width: 50px;
+}
+/* line 475, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .title {
+  font-size: 14px;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  line-height: 18px;
+  color: #444;
+  font-weight: bold;
+}
+/* line 482, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .title a {
+  text-decoration: none;
+}
+/* line 484, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .title a:hover {
+  color: #444;
+  background: none;
+  text-decoration: underline;
+}
+/* line 491, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .topics {
+  margin-bottom: 10px;
+}
+/* line 495, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .download a {
+  background-color: #588631;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+}
+/* line 501, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .publicacao .download a:hover {
+  background-color: #588631;
+  text-decoration: none;
+}
+/* line 508, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .new-publication {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/* line 512, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .new-publication a {
+  display: block;
+  background: #588631;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+/* line 518, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publicacoes .new-publication a:hover {
+  text-decoration: underline;
+}
+
+/* line 527, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publication-edit .add-topics,
+.publication-add .add-topics {
+  margin-top: 20px;
+}
+/* line 529, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+.publication-edit .add-topics input,
+.publication-add .add-topics input {
+  border: 1px solid black;
+}
+
+/* line 535, /home/nuno/rails_projects/engSoft/RG/app/assets/stylesheets/users.css.scss */
+input[type="checkbox"] {
+  width: auto !important;
+}
