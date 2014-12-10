@@ -9,7 +9,7 @@
       <% question.skills.each do |s| %>
         <% if ((user.skills).include? s) %>
           <div class="question">
-            <span class="image"><img src="/assets/default.jpg" /></span>
+            <span class="image"><%= image_tag ((User.find_by_id(question.user_id))).avatar.url(:thumb) %></span>
             <div class="user">
               <%= (User.find_by_id(question.user_id)).name %> fez uma pergunta
             </div>

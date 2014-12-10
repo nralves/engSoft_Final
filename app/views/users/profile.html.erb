@@ -1,6 +1,6 @@
 <div class="user-info">
   <div class="left">
-    <img src="/assets/default.jpg" />
+    <%= image_tag @user.avatar.url(:medium) %>
   </div>
   <div class="right">
     <p id="notice"><%= notice %></p>

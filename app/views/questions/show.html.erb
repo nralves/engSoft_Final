@@ -3,7 +3,7 @@
   <div class="question">
     <div class="user">
       <div class="image">
-        <img src="/assets/default.jpg" />
+        <%= image_tag ((User.find_by_id(@question.user_id))).avatar.url(:thumb) %>
       </div>
       <div class="info">
         <div class="name"><%= (User.find_by_id(@question.user_id)).name %></div>
@@ -48,7 +48,7 @@
   <div class="post-answer">
     <div class="user">
       <div class="image">
-        <img src="/assets/default.jpg" />
+        <%= image_tag ((User.find_by_id(@question.user_id))).avatar.url(:thumb) %>
       </div>
       <div class="info">
         <span class="name"><%= (User.find_by_id(@question.user_id)).name %></span>

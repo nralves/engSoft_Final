@@ -7,7 +7,7 @@
     <%  publication.skills.each do |s| %>
       <% if ((user.skills).include? s) %>
           <div class="publicacao">
-            <span class="image"><img src="/assets/default.jpg" /></span>
+            <span class="image"><%= image_tag ((User.find_by_id(publication.user_id))).avatar.url(:thumb) %></span>
             <div class="user">
               <%= (User.find_by_id(publication.user_id)).name %> publicou um conference papper
             </div>
