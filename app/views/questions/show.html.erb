@@ -19,7 +19,7 @@
     </div>
 
     <div class="topic">
-    <h3> Topicos </h3>
+    <h3> Tópicos </h3>
 
        <% (@question.skills).each do |skill| %>
           <span class="skill"><%= Skill.find(skill.id).name %></span>
@@ -71,7 +71,7 @@
     <% end %>
   </div>
    <% if (@question.user_id == UsersController::USERID) %>
-    <%= link_to 'Edit', edit_question_path(@question) %> |
+    <%= link_to 'Editar', edit_question_path(@question) %> |
    <% end %>
-  <%= link_to 'Back', questions_path %>
+  <%= link_to 'Voltar', questions_path %>
 </div>

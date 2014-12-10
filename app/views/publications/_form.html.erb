@@ -12,17 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Título" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id, :value=> UsersController::USERID %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label "Assunto" %><br>
     <%= f.text_area :body %>
   </div>
+  <br>
   <div class="field">
+  <p>Ficheiro para upload (Apenas PDF)</p>
   <%= f.file_field :document %>
   </div>
 <% if @publication.new_record? %>
@@ -36,6 +38,6 @@
     </div>
   <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submeter"%>
   </div>
 <% end %>

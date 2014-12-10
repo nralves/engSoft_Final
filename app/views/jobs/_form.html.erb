@@ -31,6 +31,19 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
+
+  <% if @job.new_record? %>
+    <h3>Associar tópicos</h3>
+    <div class="field">
+        <% for skill in Skill.all %>
+            <div>
+                <%= check_box_tag "job[skill_ids][]", skill.id, @job.skills.include?(skill) %>
+                <%= skill.name %>
+            </div>
+        <% end %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -29,6 +29,7 @@
     </p>
 <% end -%>
 
-
-<%= link_to 'Edit', edit_publication_path(@publication) %> |
-<%= link_to 'Back', publications_path %>
+<% if (@publication.user_id == UsersController::USERID) %>
+  <%= link_to 'Editar', edit_publication_path(@publication) %> |
+<% end %>
+<%= link_to 'Voltar', publications_path %>

@@ -2,13 +2,10 @@
   <p id="notice"><%= notice %></p>
   
   <div class="job-title"><%= @job.title %></div>
-  <div class="author"><%= @job.author %></div>
-  <div class="temas">
-    <% (@job.skills).each do |skill| %>
-        <span class="skill"><%= Skill.find(skill.id).name %></span>
-    <% end -%>
-  </div>
+  <p class="title">Assunto:</p>
   <div class="body"><%= @job.body %></div>
+  <p class="title">Autor:</p>
+  <div class="author"><%= @job.author %></div>
   <div class="apply-to-job">
     <% if !@job.available %>
         <p class="warning">This job is not available at the moment.</p>
@@ -25,9 +22,15 @@
         <p class="notice">Já concorreu a este trabalho.</p>
     <% end %>
   </div>
-
+  <div class="temas">
+  <h3>Temas relacionados</h3>
+    <% (@job.skills).each do |skill| %>
+        <span class="skill"><%= Skill.find(skill.id).name %></span>
+    <% end -%>
+  </div>
+  <br>
   <!--<%= link_to 'Edit', edit_job_path(@job) %> |-->
-  <%= link_to 'Back', jobs_path %>
+  <%= link_to 'Voltar', jobs_path %>
 </div>
 
 

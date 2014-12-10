@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label "Titulo" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label "Questão" %><br>
     <%= f.text_area :body %>
   </div>
   <div class="field">
@@ -24,6 +24,7 @@
   </div>
 
    <% if @question.new_record? %>
+    <h3>Associar tópicos</h3>
     <div class="field">
         <% for skill in Skill.all %>
             <div>
@@ -35,6 +36,6 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submeter" %>
   </div>
 <% end %>
