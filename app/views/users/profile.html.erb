@@ -27,13 +27,18 @@
     <%= link_to 'Editar', edit_user_path(@user) %>
   </div>
 </div>
+
 <div class="skills">
   <h3> As minhas Skills </h3>
 
    <% (@user.skills).each do |skill| %>
-      <span class="skill"><%= Skill.find(skill.id).name %></span>
+      <%= form_for :skill, url: { action: "remove_skill", :user_id=>@user.id, :skill_id => skill.id} do |f| %>
+        <%= submit_tag "- " + skill.name %>
+      <% end %>
   <% end -%>
+
 </div>
+
 <div class="skills-add">
   <h3> Skills para adicionar </h3>
    <% Skill.all.each do |skill| %>

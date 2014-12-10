@@ -15,6 +15,8 @@ RG::Application.routes.draw do
 
   match '/add_skill' => 'users#add_skill', :as => 'add_skill', :via => :post
 
+  match '/remove_skill' => 'users#remove_skill', :as => 'remove_skill', :via => :post
+
   match '/add_skill_to_question' => 'questions#add_skill_to_question', :as => 'add_skill_to_question', :via => :post
 
   match '/add_skill_to_job' => 'jobs#add_skill_to_job', :as => 'add_skill_to_job', :via => :post

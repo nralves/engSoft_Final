@@ -18,6 +18,21 @@ class UsersController < ApplicationController
 
   end
 
+  def remove_skill
+
+    user = User.find(params[:user_id])
+    #skill = Skill.find(params[:skill][:skill_id])
+    skill = Skill.find(params[:skill_id])
+    user.skills.delete(skill)
+
+    @user = user
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Skill Adicionado.' }
+        format.json { head :no_content }
+    end
+
+  end
+
   # GET /users
   # GET /users.json
   def index
